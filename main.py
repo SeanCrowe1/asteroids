@@ -19,6 +19,7 @@ def main():
             if event.type == pygame.QUIT:
                 return
         screen.fill((0, 0, 0), rect=None, special_flags=0)
+        ship.update(dt)
         ship.draw(screen)
         dt = clock.tick(60) / 1000
         pygame.display.flip()
